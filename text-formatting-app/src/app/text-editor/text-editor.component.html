@@ -1,0 +1,7 @@
+<input [(ngModel)]="inputText" type="text">
+<br>
+<button (click)="applyStyle('bold')">Bold</button>
+<button (click)="applyStyle('italic')">Italic</button>
+<button (click)="applyStyle('underline')">Underline</button>
+<br>
+<p [ngStyle]="textStyles">{{ inputText }}</p>

@@ -1,0 +1,9 @@
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let product of products; let i = index">
+    {{ product.name }} - Quantity:
+    <input type="number" [(ngModel)]="product.quantity" (input)="updateQuantity(i, product.quantity)">
+  </li>
+</ul>
+<h2>Shopping Cart</h2>
+<p>Total quantity: {{ shoppingCart.getTotalQuantity() }}</p>
